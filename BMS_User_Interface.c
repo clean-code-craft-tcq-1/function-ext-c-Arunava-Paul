@@ -15,15 +15,17 @@ int Data_transmission_global = FALSE;
 const struct user_interface_st usr_interface[Fault_max_condition] = USER_INTERFACE_ACCUMULATED_DATA;
 
 void Fc_Display_Msg(void)
-{	
-	if(LANGUAGE_PACK == LANGUAGE_DEFAULT)
+{	if(Fault_type_global != Fault_none)
 	{
-		printf("\n%s\n", usr_interface[Fault_type_global].user_msg_string);
+		if(LANGUAGE_PACK == LANGUAGE_DEFAULT)
+		{
+			printf("\n%s\n", usr_interface[Fault_type_global].user_msg_string);
+		}
+		else
+		{
+			printf("\n%s\n", Translate_fc(Fault_type_global));
+		}	
+		Data_transmission_global = TRUE;
 	}
-	else
-	{
-		printf("\n%s\n", Translate_fc(Fault_type_global));
-	}
-	Data_transmission_global = TRUE;
 }/*end of Fc_Display_Msg*/
 
