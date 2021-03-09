@@ -22,7 +22,7 @@
 /********************************************/
 
 /*********************************************
-	Section for Temperatures
+	Section for SOC
 *********************************************/
 
 #define BATTERY_DRAINED				0.0f
@@ -34,9 +34,19 @@
 
 /********************************************/
 
-#define MAX_CHARGE_RATE 0.8f
-#define MIN_CHARGE_RATE 0.2f
+/*********************************************
+	Section for Charge Rate
+*********************************************/
 
+#define MIN_CHARGE_RATE					0.0f
+#define MIN_SYSTEM_STOP_CHARGE_RATE		0.2f
+#define MIN_ALLOWED_CHARGE_RATE			0.3f
+#define MAX_ALLOWED_CHARGE_RATE			0.7f
+#define MAX_SYSTEM_STOP_CHARGE_RATE		0.8f
+#define MAX_BREACH_CHARGE_RATE			1.0f
+
+
+/********************************************/
 
 
 #endif /* BMS_SYSTEM_THRESHOLD_VALUES_CFG_H_ */
