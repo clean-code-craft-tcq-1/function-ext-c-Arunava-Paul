@@ -72,7 +72,7 @@ void Fc_SOC_Evaluation(float measured_SOC)
 	int idx = 0;
 	for(idx = 0 ; idx<MAX_EVALUATION_TYPES ; idx++ )
 		{
-			if(SOC_eval[idx].low_value <= measured_SOC <= SOC_eval[idx].high_value)
+			if(isInRange(SOC_eval[idx].low_value , SOC_eval[idx].high_value , measured_SOC ))
 			{
 				Sysfault_global = SOC_eval[idx].sf_type;
 				Fault_type_global = SOC_eval[idx].f_type;
