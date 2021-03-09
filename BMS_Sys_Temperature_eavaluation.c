@@ -73,7 +73,7 @@ void Fc_Temperature_Evaluation(float measured_temp)
 	int idx = 0;
 	for(idx = 0 ; idx<MAX_EVALUATION_TYPES ; idx++ )
 		{
-			if(temperature_eval[idx].low_value <= measured_temp <= temperature_eval[idx].high_value)
+			if(isInRange(temperature_eval[idx].low_value , temperature_eval[idx].high_value , measured_temp ))
 			{
 				Sysfault_global = temperature_eval[idx].sf_type;
 				Fault_type_global = temperature_eval[idx].f_type;
