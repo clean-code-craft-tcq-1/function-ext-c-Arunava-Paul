@@ -29,18 +29,30 @@ void Fc_System_shutdown(void)
 {
 	/***Shutdown Code**/
 	/*check the data transmission is done**/
+	if(Data_transmission_global == TRUE)
+	{
+		exit(0);
+	}
 }
 
 void Fc_Disconnect_Charger(void)
 {
 	/**Disconnect charger code**/
 	/*check the data transmission is done**/
+	if(Data_transmission_global == TRUE)
+	{
+		exit(0);
+	}
 }
 
 void Fc_System_Sleep(void)
 {
 	/**System Sleep code**/
 	/*check the data transmission is done**/
+	if(Data_transmission_global == TRUE)
+	{
+		exit(0);
+	}
 }
 
 void Fc_System_Standby(void)
