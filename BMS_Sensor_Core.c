@@ -12,7 +12,7 @@ int Sys_Temp_sr(float *temp)
 {
 	float sensor_value;
 	/*Core sensor read is presnt*/
-	sensor_value = 90.0;
+	sensor_value = 20.0;
 	/****************************/
 	/***************************
 	   If the sensor reads in 
@@ -38,7 +38,7 @@ int Sys_SOC_sr(float *soc)
 int Sys_C_rate_sr(float *c_rate)
 {
 	/*Core sensor read is presnt*/
-	*c_rate = 0.5;
+	*c_rate = 0.9;
 	/****************************/
 	return 0;
 }/*end of Sys_C_rate_sr*/
