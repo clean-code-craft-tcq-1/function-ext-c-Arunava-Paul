@@ -14,8 +14,8 @@
 
 /***********Configure the function needs tobe added here******************/
 
-CyclicTask_funcptrarray Cyc_aptr[] = {Fc_Temperature_Sensor_check,Fc_SOC_Sensor_check,Fc_Charge_Rate_Sensor_check,Fc_Hazard_Control};
-BckTask_funcptrarray Bg_aptr[] = {Fc_Display_Msg,Fc_Battery_Check};
+CyclicTask_funcptrarray Cyc_aptr[] = {Fc_Temperature_Sensor_check,Fc_SOC_Sensor_check,Fc_Charge_Rate_Sensor_check};
+BckTask_funcptrarray Bg_aptr[] = {Fc_Display_Msg,Fc_Battery_Check,Fc_Hazard_Control};
 
 /************************************************************************/
 
