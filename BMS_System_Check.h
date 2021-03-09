@@ -49,5 +49,8 @@ extern void Fc_Battery_Check(void);
 extern void Fc_Temperature_Sensor_check(void);
 extern void Fc_Temperature_Evaluation(float measured_temp);
 extern void Fc_SOC_Evaluation(float measured_SOC);
+extern void Fc_ChargeRate_Evaluation(float measured_chrate);
+int isInRange(float lowerLimit, float upperLimit, float no);
+
 
 #endif /* BMS_SYSTEM_CHECK_H_ */
