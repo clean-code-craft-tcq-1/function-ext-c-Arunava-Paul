@@ -27,12 +27,12 @@
 		"Warning!! System SOC is high, disconnecting from charger",										\
 	},																									\
 	{																									\
-		Fault_chargeRate_low,																			\
-		"Warning!! System charge rate is low",															\
-	},																									\
-	{																									\
 		Fault_chargeRate_high,																			\
 		"Warning!! System charge rate is high , disconnecting from charger",							\
+	},																									\
+	{																									\
+		Fault_chargeRate_low,																			\
+		"Warning!! System charge rate is low",															\
 	},																									\
 	{																									\
 		Fault_sensor_failure,																			\
