@@ -21,7 +21,7 @@ void Fc_System_init(void)
 
 void Fc_Battery_Check(void)
 {
-	if(!((Fault_type_global == Fault_none)||(Fault_type_global == Fault_chargeRate_low)))
+	if(!((Fault_type_global == Fault_none)))
 	{
 		assert(1);
 	}
@@ -32,4 +32,8 @@ void Fc_Battery_Check(void)
 }
 
 
+int isInRange(float lowerLimit, float upperLimit, float no)
+{
+    return (lowerLimit < no && no < upperLimit);
+}
 
