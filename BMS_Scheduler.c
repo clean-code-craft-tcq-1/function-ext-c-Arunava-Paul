@@ -18,28 +18,27 @@ void Fc_Cyclic_task(void)
 		{
 			Fc_start_timer();
 			//call the function
-			if(Cyc_aptr[idx_f] != NULL_PTR)
-			{
-				(*Cyc_aptr[idx_f])();
-			}
-			idx_f++;
-			if(idx_f == MAX_FG_TASK)
-			{
-				idx_f = 0; //Initialize the index
-			}
+			(*Cyc_aptr[idx_f])();
+			idx_f++;			
 		}/*end of if(counter_elapsed() == TRUE)*/
 		else
-		{
-			if(Bg_aptr[idx_b]!=NULL_PTR)
-			{
-				//call the function
-				(*Bg_aptr[idx_b])();
-			}
-			idx_b++;
-			if(idx_b == MAX_BG_TASK)
-			{
-				idx_b = 0; //Initialize the index
-			}
+		{			
+			//call the function
+			(*Bg_aptr[idx_b])();
+			idx_b++;			
 		}/*end of else*/
+		fc_Task_Index_Handler(&idx_f , &idx_b);
 	}
 }/*end of Fc_Cyclic_task*/
+
+void fc_Task_Index_Handler(int *cyc_idx, int *bg_idx)
+{
+	if(*cyc_idx == MAX_FG_TASK)
+	{
+		*cyc_idx = 0; //Initialize the index
+	}
+	if(*bg_idx == MAX_BG_TASK)
+	{
+		*bg_idx = 0; //Initialize the index
+	}
+}/*end of fc_Task_Index_Handler*/
