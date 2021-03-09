@@ -27,7 +27,7 @@ void Fc_Battery_Check(void)
 	}
 	else
 	{
-		assert(0);
+		//do nothing
 	}
 }
 
